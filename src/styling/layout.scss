@@ -7,6 +7,7 @@
 	:global(body) {
 		background-color: $nav-background-color;
 		font-family: $main-font-family;
+		margin: 0;
 		position: relative;
 
 		.navbar {
@@ -24,8 +25,6 @@
 			left: 0;
 			transition: 500ms ease-in-out;
 			z-index: 5;
-			overflow-x: hidden;
-			overflow-y: auto;
 
 			.nav-list {
 				list-style-type: none;

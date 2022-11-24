@@ -1,10 +1,18 @@
-<script lang="Typescript">
+<script lang="typescript">
     import Hamburger from "../components/Hamburger.svelte";
+    let open = false;
+    let menuHidden = true;
+    function openMenu() {
+        open = !open
+        menuHidden = !menuHidden
+    }
+
+
 </script>
 
-<Hamburger />
+<Hamburger {open} {openMenu} />
 
-<nav class="navbar hidden" id="menu">
+<nav class="{menuHidden ? 'navbar hidden' : 'navbar'}">
     <ul class="nav-list">
         <li class="nav-list-item">
             <a href="/" class="link">
@@ -26,6 +34,10 @@
 
 <div class="main-wrapper">
     <slot></slot>
+    
+    <footer class="footer">
+        &#169; BorysWnr 2022
+    </footer>
 </div>
 
 <style lang="scss">

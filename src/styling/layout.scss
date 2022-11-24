@@ -7,6 +7,7 @@
 	:global(body) {
 		background-color: $nav-background-color;
 		font-family: $main-font-family;
+		position: relative;
 
 		.navbar {
 			color: $main-font-color;
@@ -19,7 +20,12 @@
 			justify-content: center;
 			font-size: 40px;
 			position: fixed;
-            transition: 300ms;
+			top: 0;
+			left: 0;
+			transition: 500ms ease-in-out;
+			z-index: 5;
+			overflow-x: hidden;
+			overflow-y: auto;
 
 			.nav-list {
 				list-style-type: none;

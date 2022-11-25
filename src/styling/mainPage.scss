@@ -1,44 +1,20 @@
 @import './variables';
 
-.welcome-sign {
-	padding: 20px 0;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	background-color: $welcome-sign-background-color;
+.section {
+	opacity: 0;
+	transition: all 2s ease;
+	filter: blur(5px);
+	transform: translate(-100%, 0);
 
-	.img-container {
-		position: relative;
-		.photo {
-			max-width: 200px;
-		}
-
-		.eye-image {
-			position: absolute;
-			border-radius: 50%;
-			width: 15px;
-
-			&.right {
-				top: 59px;
-				right: 87px;
-			}
-
-			&.left {
-				top: 62px;
-				right: 113px;
-			}
-		}
+	&.show {
+		opacity: 1;
+		filter: blur(0);
+		transform: translate(0, 0);
 	}
+}
 
-	.title {
-		color: $main-font-color;
-		background-color: #00000086;
-		padding: 10px 15px;
-		margin: 0;
-		border-radius: 5px;
-		border: 1px white solid;
+@media (prefers-reduced-motion) {
+	.section {
+		transition: none;
 	}
 }

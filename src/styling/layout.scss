@@ -7,6 +7,7 @@
 	:global(body) {
 		background-color: $nav-background-color;
 		font-family: $main-font-family;
+		color: $main-font-color;
 		margin: 0;
 		position: relative;
 
@@ -33,9 +34,15 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+				transition: 200ms;
+
+				&:hover > .nav-list-item {
+					opacity: 0.3;
+				}
 
 				.nav-list-item {
 					margin: 0 0 20px 0;
+					transition: 200ms;
 
 					&:last-child {
 						margin: 0;
@@ -43,6 +50,7 @@
 
 					&:hover {
 						scale: 1.1;
+						opacity: 1 !important;
 					}
 
 					.link {

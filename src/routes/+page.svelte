@@ -3,6 +3,7 @@
     import {onMount} from 'svelte';
 	import WelcomeSign from '../components/WelcomeSign.svelte';
 	import TechStack from '../components/TechStack.svelte';
+	import ProjectCards from '../components/ProjectCards.svelte';
     let mouseX: number;
     let mouseY: number;
 
@@ -41,17 +42,34 @@
 
 <WelcomeSign />
 
-<section class="hide show">
+<section class="hide section technologies">
     <TechStack />
 </section>
 
-<section class="hide">
+<section class="hide section projects">
+    <h3>
+        My projects
+    </h3>
 
-    <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, commodi. Impedit consectetur nulla rem minima inventore obcaecati libero placeat nisi deserunt excepturi esse alias id, fuga laborum ea corporis delectus?
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, commodi. Impedit consectetur nulla rem minima inventore obcaecati libero placeat nisi deserunt excepturi esse alias id, fuga laborum ea corporis delectus?
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, commodi. Impedit consectetur nulla rem minima inventore obcaecati libero placeat nisi deserunt excepturi esse alias id, fuga laborum ea corporis delectus?
-</p>
+    <div class="gallery">        
+        <div class="hide project-container" style="--order: 1">
+            <ProjectCards />
+        </div>
+        
+        <div class="hide" style="--order: 2">
+            <ProjectCards />
+        </div>
+        
+        <div class="hide" style="--order: 3">
+            <ProjectCards />
+        </div>
+        
+        <div class="hide" style="--order: 4">
+            <ProjectCards />
+        </div>
+    
+    </div>
+    
 </section>
 <section class="hide">
 
@@ -111,5 +129,6 @@
 </section>
 
 <style lang="scss">
-    @import "../styling/mainPage.scss"
+    @import "../styling/mainPage.scss";
+    @import "../styling/components/showOnScroll";
 </style>

@@ -8,7 +8,7 @@
 </script>
 
 <h2>
-    Tech stack
+    Technologies I work with
 </h2>
 <div class="technologies-frame">
     <div class="logo-wrapper hide" style="--order: 1">

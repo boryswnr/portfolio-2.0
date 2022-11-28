@@ -1,0 +1,58 @@
+@import '../variables';
+
+.project-wrapper {
+	.project-card {
+		position: relative;
+		transition: 200ms;
+
+		.project-screen {
+			position: absolute;
+			max-width: 200px;
+			transition: all 200ms ease-in-out;
+		}
+
+		#card-1 {
+			top: 0;
+			left: 0;
+			z-index: 5;
+			transform: rotate(-5deg);
+		}
+
+		#card-2 {
+			top: 9px;
+			left: 9px;
+			z-index: 6;
+			transform: rotate(3deg);
+		}
+
+		#card-3 {
+			top: 15px;
+			left: 10px;
+			z-index: 7;
+			transform: rotate(-3deg);
+		}
+
+		#card-4 {
+			top: 20px;
+			left: 25px;
+			z-index: 8;
+			transform: rotate(5deg);
+		}
+	}
+
+	:hover > #card-1 {
+		transform: translate(-45%, -45%) rotate(-8deg);
+	}
+
+	:hover > #card-2 {
+		transform: translate(-45%, 45%) rotate(-5deg);
+	}
+
+	:hover > #card-3 {
+		transform: translate(45%, -45%) rotate(6deg);
+	}
+
+	:hover > #card-4 {
+		transform: translate(45%, 45%) rotate(-6deg);
+	}
+}

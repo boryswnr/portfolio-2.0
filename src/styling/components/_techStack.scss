@@ -1,0 +1,26 @@
+@import '../variables';
+
+.technologies-frame {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	padding: 10px 20px;
+	border-radius: 15px;
+	// border: 1px solid $borders-color;
+	// background-color: $tech-stack-bg-color;
+	.logo-wrapper {
+		width: 22%;
+		margin: 10px 10px 0 0;
+
+		&:nth-child(4n) {
+			margin: 10px 0 0 0;
+		}
+
+		.logo {
+			height: 100px;
+		}
+	}
+}

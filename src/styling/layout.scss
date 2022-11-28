@@ -3,6 +3,7 @@
 
 :global(html) {
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 
 	:global(body) {
 		background-color: $nav-background-color;

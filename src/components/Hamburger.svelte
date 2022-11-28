@@ -1,6 +1,6 @@
-<script>
+<script lang="typescript">
    export let open = false;
-   export let openMenu;
+    export let openMenu: () =>  void;
 </script>
 
 <svg class="{open ? 'ham ham2 active' : 'ham ham2'}" viewBox="0 0 100 100" width="80" id="menu-btn" on:click={openMenu} on:keydown={openMenu}>

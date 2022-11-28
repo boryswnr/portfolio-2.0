@@ -3,13 +3,13 @@ export function intersectionObserver() {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
 				entry.target.classList.add('show');
-				// } else {
-				//     entry.target.classList.remove('show');
+			} else {
+				entry.target.classList.remove('show');
 			}
 		});
 	});
 
-	const hiddenElements = document.querySelectorAll('.section');
+	const hiddenElements = document.querySelectorAll('.hide');
 	hiddenElements.forEach((el) => el.classList.remove('show'));
 	hiddenElements.forEach((el) => observer.observe(el));
 }

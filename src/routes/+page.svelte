@@ -1,5 +1,5 @@
 <script lang="typescript">
-	import { intersectionObserver } from '../utils';
+	import { intersectionObserver, angle } from '../utils';
     import {onMount} from 'svelte';
 	import WelcomeSign from '../components/WelcomeSign.svelte';
 	import TechStack from '../components/TechStack.svelte';
@@ -9,7 +9,7 @@
 
     onMount(() => {
             intersectionObserver()
-    })
+        })
 
     function handleMouseMove(e: MouseEvent) {
         mouseX = e.clientX;
@@ -19,22 +19,36 @@
         if (imageMiddle) {
         const imageMiddleX = imageMiddle.left + imageMiddle.width / 2;
         const imageMiddleY = imageMiddle.top + imageMiddle.height / 2;
-        
         const angleDeg = angle(mouseX, mouseY, imageMiddleX, imageMiddleY);
         const eyes: NodeListOf<HTMLElement> = document.querySelectorAll('.eye-image'); 
             eyes.forEach(eye => { eye.style.transform = `rotate(${90 + angleDeg}deg)`})
         }
     }
 
-    function angle(cx: number, cy: number, ex: number, ey: number) {
-        const dy = ey - cy;
-        const dx = ex - cx;
-        const rad = Math.atan2(dy, dx);
-        const deg = rad * 180 / Math.PI
-
-        return deg
+    function focusOnProject(e: PointerEvent) {
+        console.log(e)
+        let target = e.target as HTMLElement
+        if (target.classList.contains("project-screen")) {
+            target = target.parentElement?.parentElement?.parentElement as HTMLElement
+        }
+        const projectsArray = document.querySelectorAll(".project-container");
+        console.log(projectsArray);
+        projectsArray.forEach(project => project.classList.toggle('show'));
+        target.classList.add("show", "active");
+        let card1 =  document.getElementById("card-1") as HTMLElement;
+        let card2 =  document.getElementById("card-2") as HTMLElement;
+        let card3 =  document.getElementById("card-3") as HTMLElement;
+        let card4 =  document.getElementById("card-4") as HTMLElement;
+        card1.style.transform = "translate(-45%, -45%) rotate(-8deg)";
+        card2.style.transform = "translate(-45%, 45%) rotate(-5deg)";
+        card3.style.transform = "translate(45%, -45%) rotate(6deg)";
+        card4.style.transform = "translate(45%, 45%) rotate(-6deg)";
+        let details = document.querySelector(".details");
+        details?.classList.add("visible");
+        
     }
-    
+  
+  
     
 </script>
 
@@ -52,19 +66,19 @@
     </h3>
 
     <div class="gallery">        
-        <div class="hide project-container" style="--order: 1">
+        <div class="hide project-container" style="--order: 1" on:click={focusOnProject}>
             <ProjectCards />
         </div>
         
-        <div class="hide" style="--order: 2">
+        <div class="hide project-container" style="--order: 2">
             <ProjectCards />
         </div>
         
-        <div class="hide" style="--order: 3">
+        <div class="hide project-container" style="--order: 3">
             <ProjectCards />
         </div>
         
-        <div class="hide" style="--order: 4">
+        <div class="hide project-container" style="--order: 4">
             <ProjectCards />
         </div>
     
@@ -131,4 +145,8 @@
 <style lang="scss">
     @import "../styling/mainPage.scss";
     @import "../styling/components/showOnScroll";
+
+    .project-container {
+        transition-delay: calc(100ms * var(--order));
+    }
 </style>

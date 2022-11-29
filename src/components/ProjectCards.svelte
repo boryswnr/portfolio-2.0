@@ -30,6 +30,18 @@
         alt="" 
         id="card-4"
         >
+        <div class="details">
+
+            <h6 class="description title">
+                Title
+            </h6>
+            <p class="description text">
+                Description of the project
+            </p>
+            <a class="github btn" href="http://github.com">
+                <img alt="a github icon" src="./github.svg">
+            </a>
+        </div>
         <!-- TODO: ADD GITHUB AND DEPLOYMENT BTNS -->
     </div>
 </div>

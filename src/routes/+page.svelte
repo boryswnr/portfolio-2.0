@@ -6,6 +6,7 @@
 	import ProjectCards from '../components/ProjectCards.svelte';
     let mouseX: number;
     let mouseY: number;
+    let focusedProject;
 
     onMount(() => {
             intersectionObserver()
@@ -25,16 +26,19 @@
         }
     }
 
-    function focusOnProject(e: PointerEvent) {
-        console.log(e)
-        let target = e.target as HTMLElement
+    function focusOnProject(e: MouseEvent) {
+        console.log(e);
+        let target = e.target as HTMLElement;
         if (target.classList.contains("project-screen")) {
             target = target.parentElement?.parentElement?.parentElement as HTMLElement
+            console.log("target:", target)
         }
+        const projectWrapper = document.querySelector(".details");
         const projectsArray = document.querySelectorAll(".project-container");
         console.log(projectsArray);
         projectsArray.forEach(project => project.classList.toggle('show'));
         target.classList.add("show", "active");
+        projectWrapper?.classList.add("show-details")
         let card1 =  document.getElementById("card-1") as HTMLElement;
         let card2 =  document.getElementById("card-2") as HTMLElement;
         let card3 =  document.getElementById("card-3") as HTMLElement;
@@ -42,17 +46,18 @@
         card1.style.transform = "translate(-45%, -45%) rotate(-8deg)";
         card2.style.transform = "translate(-45%, 45%) rotate(-5deg)";
         card3.style.transform = "translate(45%, -45%) rotate(6deg)";
-        card4.style.transform = "translate(45%, 45%) rotate(-6deg)";
-        let details = document.querySelector(".details");
-        details?.classList.add("visible");
-        
+        card4.style.transform = "translate(45%, 45%) rotate(-6deg)";        
+    }
+
+    function printClickTarget(e: MouseEvent) {
+        console.log(e.target)
     }
   
   
     
 </script>
 
-<svelte:window on:mousemove={handleMouseMove} />
+<svelte:window on:mousemove={handleMouseMove} on:click={printClickTarget} />
 
 <WelcomeSign />
 
@@ -66,16 +71,20 @@
     </h3>
 
     <div class="gallery">        
-        <div class="hide project-container" style="--order: 1" on:click={focusOnProject}>
+        <div 
+        class="hide project-container" 
+        style="--order: 1" 
+        on:click={focusOnProject}
+        > 
             <ProjectCards />
         </div>
         
         <div class="hide project-container" style="--order: 2">
-            <ProjectCards />
+          <ProjectCards />
         </div>
         
         <div class="hide project-container" style="--order: 3">
-            <ProjectCards />
+           <ProjectCards />
         </div>
         
         <div class="hide project-container" style="--order: 4">

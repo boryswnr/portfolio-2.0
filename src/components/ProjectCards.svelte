@@ -1,7 +1,9 @@
 <script>
+    import FaGithub from 'svelte-icons/fa/FaGithub.svelte';
     let deploymentAvailable = true;
     let githubLink = "";
-    let deplymentLink = "";
+    let deploymentLink = "";
+    
 </script>
 
 <div class="project-wrapper">
@@ -30,20 +32,18 @@
         alt="" 
         id="card-4"
         >
-        <div class="details">
-
-            <h6 class="description title">
-                Title
-            </h6>
-            <p class="description text">
-                Description of the project
-            </p>
-            <a class="github btn" href="http://github.com">
-                <img alt="a github icon" src="./github.svg">
-            </a>
-        </div>
+        
         <!-- TODO: ADD GITHUB AND DEPLOYMENT BTNS -->
     </div>
+
+    <div class="details">
+        <h6>Title</h6>
+        <p>Description</p>
+        <div class="icons">
+            <FaGithub />
+        </div>
+    </div>
+
 </div>
 
 <style lang="scss">

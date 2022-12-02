@@ -1,51 +1,21 @@
 <script>
-    import FaGithub from 'svelte-icons/fa/FaGithub.svelte';
-    let deploymentAvailable = true;
-    let githubLink = "";
-    let deploymentLink = "";
-    
+	import FaGithub from 'svelte-icons/fa/FaGithub.svelte';
+	let deploymentAvailable = true;
+	let githubLink = '';
+	let deploymentLink = '';
 </script>
 
 <div class="project-wrapper">
-    <div class="project-card">
-        <img 
-        class="project-screen" 
-        src="http://picsum.photos/300/200?1" 
-        alt="" 
-        id="card-1"
-        >
-        <img 
-        class="project-screen" 
-        src="http://picsum.photos/300/200?2" 
-        alt="" 
-        id="card-2"
-        >
-        <img 
-        class="project-screen" 
-        src="http://picsum.photos/300/200?3" 
-        alt="" 
-        id="card-3"
-        >
-        <img 
-        class="project-screen" 
-        src="http://picsum.photos/300/200?4" 
-        alt="" 
-        id="card-4"
-        >
-        
-        <!-- TODO: ADD GITHUB AND DEPLOYMENT BTNS -->
-    </div>
+	<div class="project-card">
+		<img class="project-screen" src="http://picsum.photos/300/200?1" alt="" id="card-1" />
+		<img class="project-screen" src="http://picsum.photos/300/200?2" alt="" id="card-2" />
+		<img class="project-screen" src="http://picsum.photos/300/200?3" alt="" id="card-3" />
+		<img class="project-screen" src="http://picsum.photos/300/200?4" alt="" id="card-4" />
 
-    <div class="details">
-        <h6>Title</h6>
-        <p>Description</p>
-        <div class="icons">
-            <FaGithub />
-        </div>
-    </div>
-
+		<!-- TODO: ADD GITHUB AND DEPLOYMENT BTNS -->
+	</div>
 </div>
 
 <style lang="scss">
-    @import "../styling/components/projectCards";
+	@import '../styling/components/projectCards';
 </style>

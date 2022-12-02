@@ -2,26 +2,7 @@
 
 .project-wrapper {
 	z-index: 20;
-	.details {
-		margin: 40px 0 0 0;
-		transform: translate(0, 100%);
-		filter: blur(5px);
-		opacity: 0;
-		transition: all 400ms ease-in-out;
-		transition-delay: 800ms;
 
-		:is(&.show-details) {
-			transform: translate(0, 0);
-			filter: blur(0);
-			opacity: 1;
-			z-index: 15;
-		}
-
-		.icons {
-			width: 30px;
-			z-index: 15;
-		}
-	}
 	.project-card {
 		position: relative;
 		transition: 200ms;

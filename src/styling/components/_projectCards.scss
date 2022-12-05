@@ -51,6 +51,13 @@
 		}
 	}
 
+	.links-wrapper {
+		display: flex;
+		justify-content: space-around;
+		margin: 0 0 10px 0;
+		font-size: 20px;
+	}
+
 	:hover > #card-1 {
 		transform: translate(-45%, -45%) rotate(-8deg);
 	}

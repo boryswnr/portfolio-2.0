@@ -1,8 +1,9 @@
 <script>
-	import FaGithub from 'svelte-icons/fa/FaGithub.svelte';
-	let deploymentAvailable = true;
-	let githubLink = '';
-	let deploymentLink = '';
+	import Fa from 'svelte-fa/src/fa.svelte';
+	import { faGithub } from '@fortawesome/free-brands-svg-icons/index.js';
+	import { faLink } from '@fortawesome/free-solid-svg-icons/index.js';
+	export let githubLink = '';
+	export let deploymentLink = '';
 </script>
 
 <div class="project-wrapper">
@@ -13,6 +14,16 @@
 		<img class="project-screen" src="http://picsum.photos/300/200?4" alt="" id="card-4" />
 
 		<!-- TODO: ADD GITHUB AND DEPLOYMENT BTNS -->
+	</div>
+	<div class="links-wrapper">
+		<a href={githubLink}>
+			<Fa icon={faGithub} />
+		</a>
+		{#if deploymentLink}
+			<a href={deploymentLink}>
+				<Fa icon={faLink} />
+			</a>
+		{/if}
 	</div>
 </div>
 

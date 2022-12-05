@@ -3,7 +3,26 @@
 .section {
 	margin: 0 0 100px 0;
 
+	&.about-me {
+		.cv-download-btn {
+			background-color: $tech-stack-bg-color;
+			border: 1px solid $borders-color;
+			padding: 10px 15px;
+			border-radius: 20px;
+			box-shadow: -8px 11px 20px -1px rgba(0, 0, 0, 0.46);
+			-webkit-box-shadow: -8px 11px 20px -1px rgba(0, 0, 0, 0.46);
+			-moz-box-shadow: -8px 11px 20px -1px rgba(0, 0, 0, 0.46);
+
+			&:active {
+				box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75) inset;
+				-webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75) inset;
+				-moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75) inset;
+			}
+		}
+	}
+
 	&.projects {
+		text-align: justify;
 		.gallery {
 			display: grid;
 			grid-template-columns: repeat(2, 300px);

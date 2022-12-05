@@ -12,6 +12,15 @@
 		margin: 0;
 		position: relative;
 
+		:global(a) {
+			text-decoration: none;
+			color: $main-font-color;
+
+			&:hover {
+				color: $link-hover-color;
+			}
+		}
+
 		.navbar {
 			color: $main-font-color;
 			background-color: $nav-background-color;

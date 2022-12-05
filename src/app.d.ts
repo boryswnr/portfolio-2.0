@@ -7,3 +7,11 @@ declare namespace App {
 	// interface Error {}
 	// interface Platform {}
 }
+
+// Font Awesome icons
+declare module '@fortawesome/free-regular-svg-icons/index.es' {
+	export * from '@fortawesome/free-regular-svg-icons';
+}
+declare module '@fortawesome/free-brands-svg-icons/index.es' {
+	export * from '@fortawesome/free-brands-svg-icons';
+}

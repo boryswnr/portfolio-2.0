@@ -32,6 +32,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fortawesome/free-brands-svg-icons": "^6.2.1",
+		"svelte-fa": "^3.0.3",
 		"svelte-fontawesome": "^0.0.3",
 		"svelte-icons": "^2.1.0"
 	}

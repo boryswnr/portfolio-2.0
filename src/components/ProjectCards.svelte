@@ -4,15 +4,24 @@
 	import { faLink } from '@fortawesome/free-solid-svg-icons/index.js';
 	export let githubLink = '';
 	export let deploymentLink = '';
+	export let photo1 = '';
+	export let photo2 = '';
+	export let photo3 = '';
+	export let photo4 = '';
 </script>
 
 <div class="project-wrapper">
 	<div class="project-card">
-		<img class="project-screen" src="http://picsum.photos/300/200?1" alt="" id="card-1" />
-		<img class="project-screen" src="http://picsum.photos/300/200?2" alt="" id="card-2" />
-		<img class="project-screen" src="http://picsum.photos/300/200?3" alt="" id="card-3" />
-		<img class="project-screen" src="http://picsum.photos/300/200?4" alt="" id="card-4" />
-
+		<img class="project-screen" src={photo1} alt="a screen of the project" id="card-1" />
+		{#if photo2}
+			<img class="project-screen" src={photo2} alt="a screen of the project" id="card-2" />
+		{/if}
+		{#if photo3}
+			<img class="project-screen" src={photo3} alt="a screen of the project" id="card-3" />
+		{/if}
+		{#if photo4}
+			<img class="project-screen" src={photo4} alt="a screen of the project" id="card-4" />
+		{/if}
 		<!-- TODO: ADD GITHUB AND DEPLOYMENT BTNS -->
 	</div>
 	<div class="links-wrapper">

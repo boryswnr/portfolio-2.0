@@ -85,17 +85,29 @@
 
 	<div class="gallery">
 		<div class="hide project-container" style="--order: 1">
-			<ProjectCards githubLink="https://github.com/boryswnr/party_app" />
+			<ProjectCards
+				githubLink="https://github.com/boryswnr/party_app"
+				photo1="project-screens/party-app-1.png"
+				photo2="project-screens/party-app-2.png"
+				photo3="project-screens/party-app-3.png"
+				photo4="project-screens/party-app-4.png"
+			/>
 			<h6 class="project-title">Shared Music controller app</h6>
 			<p class="project-description">
 				A fullstack project built around Spotify API to let people play/pause music and vote on
-				skipping a song. No deployment available. See README in the repo to for instructions on how
-				to spin it up.
+				skipping a song. No deployment available. I am working on a version that will be deployed
+				live.
 			</p>
 		</div>
 
 		<div class="hide project-container" style="--order: 2">
-			<ProjectCards githubLink="https://github.com/boryswnr/shopping-cart" />
+			<ProjectCards
+				githubLink="https://github.com/boryswnr/shopping-cart"
+				deploymentLink="https://borys-shopping-cart.netlify.app/"
+				photo1="project-screens/shopping-cart-1.png"
+				photo2="project-screens/shopping-cart-2.png"
+				photo3="project-screens/shopping-cart-3.png"
+			/>
 			<h6 class="project-title">E-commerce frontend</h6>
 			<p class="project-description">
 				A frontend of an e-commerce shopping cart. Technologies used: TypeScript, React. A shopping
@@ -107,6 +119,9 @@
 			<ProjectCards
 				githubLink="https://github.com/boryswnr/game-of-life"
 				deploymentLink="https://boryswnr.github.io/game-of-life/"
+				photo1="project-screens/game-of-life-1.png"
+				photo2="project-screens/game-of-life-2.png"
+				photo3="project-screens/game-of-life-3.png"
 			/>
 			<h6 class="project-title">A game of life</h6>
 			<p class="project-description">
@@ -119,6 +134,8 @@
 			<ProjectCards
 				githubLink="https://github.com/boryswnr/weatherApp"
 				deploymentLink="https://boryswnr.github.io/weatherApp/"
+				photo1="project-screens/weather-app-1.png"
+				photo2="project-screens/weather-app-2.png"
 			/>
 			<h6 class="project-title">Weather forecast app.</h6>
 			<p class="project-description">

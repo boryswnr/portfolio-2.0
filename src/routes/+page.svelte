@@ -4,6 +4,10 @@
 	import WelcomeSign from '../components/WelcomeSign.svelte';
 	import TechStack from '../components/TechStack.svelte';
 	import ProjectCards from '../components/ProjectCards.svelte';
+	import ContactForm from '../components/ContactForm.svelte';
+	import Fa from 'svelte-fa/src/fa.svelte';
+	import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons/index.js';
+	import { faG } from '@fortawesome/free-solid-svg-icons';
 	let mouseX: number;
 	let mouseY: number;
 	let focusedProject;
@@ -146,78 +150,21 @@
 		</div>
 	</div>
 </section>
-<section class="hide " />
-<section class="hide">
-	<p>
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, commodi. Impedit consectetur
-		nulla rem minima inventore obcaecati libero placeat nisi deserunt excepturi esse alias id, fuga
-		laborum ea corporis delectus? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-		commodi. Impedit consectetur nulla rem minima inventore obcaecati libero placeat nisi deserunt
-		excepturi esse alias id, fuga laborum ea corporis delectus? Lorem, ipsum dolor sit amet
-		consectetur adipisicing elit. Vitae, commodi. Impedit consectetur nulla rem minima inventore
-		obcaecati libero placeat nisi deserunt excepturi esse alias id, fuga laborum ea corporis
-		delectus?
-	</p>
-</section>
-<section class="hide">
-	<p>
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, commodi. Impedit consectetur
-		nulla rem minima inventore obcaecati libero placeat nisi deserunt excepturi esse alias id, fuga
-		laborum ea corporis delectus? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-		commodi. Impedit consectetur nulla rem minima inventore obcaecati libero placeat nisi deserunt
-		excepturi esse alias id, fuga laborum ea corporis delectus? Lorem, ipsum dolor sit amet
-		consectetur adipisicing elit. Vitae, commodi. Impedit consectetur nulla rem minima inventore
-		obcaecati libero placeat nisi deserunt excepturi esse alias id, fuga laborum ea corporis
-		delectus?
-	</p>
-</section>
-<section class="hide">
-	<p>
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, commodi. Impedit consectetur
-		nulla rem minima inventore obcaecati libero placeat nisi deserunt excepturi esse alias id, fuga
-		laborum ea corporis delectus? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-		commodi. Impedit consectetur nulla rem minima inventore obcaecati libero placeat nisi deserunt
-		excepturi esse alias id, fuga laborum ea corporis delectus? Lorem, ipsum dolor sit amet
-		consectetur adipisicing elit. Vitae, commodi. Impedit consectetur nulla rem minima inventore
-		obcaecati libero placeat nisi deserunt excepturi esse alias id, fuga laborum ea corporis
-		delectus?
-	</p>
-</section>
-<section class="hide">
-	<p>
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, commodi. Impedit consectetur
-		nulla rem minima inventore obcaecati libero placeat nisi deserunt excepturi esse alias id, fuga
-		laborum ea corporis delectus? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-		commodi. Impedit consectetur nulla rem minima inventore obcaecati libero placeat nisi deserunt
-		excepturi esse alias id, fuga laborum ea corporis delectus? Lorem, ipsum dolor sit amet
-		consectetur adipisicing elit. Vitae, commodi. Impedit consectetur nulla rem minima inventore
-		obcaecati libero placeat nisi deserunt excepturi esse alias id, fuga laborum ea corporis
-		delectus?
-	</p>
-</section>
-<section class="hide">
-	<p>
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, commodi. Impedit consectetur
-		nulla rem minima inventore obcaecati libero placeat nisi deserunt excepturi esse alias id, fuga
-		laborum ea corporis delectus? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-		commodi. Impedit consectetur nulla rem minima inventore obcaecati libero placeat nisi deserunt
-		excepturi esse alias id, fuga laborum ea corporis delectus? Lorem, ipsum dolor sit amet
-		consectetur adipisicing elit. Vitae, commodi. Impedit consectetur nulla rem minima inventore
-		obcaecati libero placeat nisi deserunt excepturi esse alias id, fuga laborum ea corporis
-		delectus?
-	</p>
-</section>
-<section class="hide">
-	<p>
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, commodi. Impedit consectetur
-		nulla rem minima inventore obcaecati libero placeat nisi deserunt excepturi esse alias id, fuga
-		laborum ea corporis delectus? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-		commodi. Impedit consectetur nulla rem minima inventore obcaecati libero placeat nisi deserunt
-		excepturi esse alias id, fuga laborum ea corporis delectus? Lorem, ipsum dolor sit amet
-		consectetur adipisicing elit. Vitae, commodi. Impedit consectetur nulla rem minima inventore
-		obcaecati libero placeat nisi deserunt excepturi esse alias id, fuga laborum ea corporis
-		delectus?
-	</p>
+
+<section class="hide contact-form">
+	<h3 class="contact-title">Contact</h3>
+
+	<div>
+		<p>Find me here:</p>
+		<a href="linkedin.com" class="icon-link linkedin"><Fa icon={faLinkedin} /></a>
+		<a href="github.com" class="icon-link github"><Fa icon={faGithub} /></a>
+	</div>
+
+	<p>Wanna use my fancy form?</p>
+
+	<ContactForm />
+
+	<p>Prefer simple e-mail? Mail me <a href="mailto: boryswnr@protonmail.com">here.</a></p>
 </section>
 
 <style lang="scss">

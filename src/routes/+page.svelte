@@ -9,7 +9,8 @@
 	import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons/index.js';
 	let mouseX: number;
 	let mouseY: number;
-	let focusedProject;
+	let colorsNumber = 0;
+	let colorsArray = ['black', 'pink', 'green', 'purple', 'orange', 'blue'];
 
 	onMount(() => {
 		intersectionObserver();
@@ -24,15 +25,27 @@
 			const imageMiddleX = imageMiddle.left + imageMiddle.width / 2;
 			const imageMiddleY = imageMiddle.top + imageMiddle.height / 2;
 			const angleDeg = angle(mouseX, mouseY, imageMiddleX, imageMiddleY);
-			const eyes: NodeListOf<HTMLElement> = document.querySelectorAll('.eye-image');
+			const eyes: NodeListOf<HTMLElement> = document.querySelectorAll('.eye-div');
 			eyes.forEach((eye) => {
-				eye.style.transform = `rotate(${90 + angleDeg}deg)`;
+				eye.style.transform = `rotate(${-60 + angleDeg}deg)`;
 			});
 		}
 	}
+
+	function changeEyeColor() {
+		// const rightEye = document.querySelector('.eye-div.right') as Element;
+		// const leftEye = document.querySelector('.eye-div.left') as Element;
+		const eyeballs = document.querySelectorAll('.eyeball') as NodeListOf<HTMLElement>;
+		colorsNumber + 1 >= colorsArray.length ? (colorsNumber = 0) : (colorsNumber += 1);
+		// console.log('colorsNumber:', colorsNumber);
+		// console.log(rightEyePseudo, leftEyePseudo);
+		eyeballs.forEach((eye) => {
+			eye.style.backgroundColor = colorsArray[colorsNumber];
+		});
+	}
 </script>
 
-<svelte:window on:mousemove={handleMouseMove} />
+<svelte:window on:mousemove={handleMouseMove} on:click={changeEyeColor} />
 
 <WelcomeSign />
 

@@ -81,13 +81,13 @@
        d="M 250,155 H 100 c 0,0 -45,0 -45,95 0,95 45,95 45,95 h 45 v -45 c 0,-30 25,-55 55,-55 h 100 c 25,0 45,-20 45,-45 V 100 c 0,0 0,-45 -95,-45 -95,0 -95,45 -95,45 v 45 h 95 z"
        id="path101"
        inkscape:connector-curvature="0"
-       style="fill:#cacaca;fill-opacity:1"
+       style="fill:#D7CFCD;fill-opacity:1"
        sodipodi:nodetypes="cczccssssczcccc" />
     <path
        d="m 250,345 h 150 c 0,0 45,0 45,-95 0,-95 -45,-95 -45,-95 h -45 v 45 c 0,30 -25,55 -55,55 H 200 c -25,0 -45,20 -45,45 v 100 c 0,0 0,45 95,45 95,0 95,-45 95,-45 v -45 h -95 z"
        id="path102"
        inkscape:connector-curvature="0"
-       style="fill:#cacaca;fill-opacity:1"
+       style="fill:#D7CFCD;fill-opacity:1"
        sodipodi:nodetypes="cczccssssczcccc" />
     <circle
        style="fill:#ffffff;fill-opacity:1"

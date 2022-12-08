@@ -10,6 +10,7 @@
 		<img alt="Rick from Rick and Morty cartoon" src="./rick-portrait.png" class="photo" id="rick" />
 	</div>
 	<h1 class="title">Hi, I'm Borys. Welcome to my website.</h1>
+	<div class="scroll-sign" />
 </div>
 
 <style lang="scss">

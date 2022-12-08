@@ -25,11 +25,11 @@
 		<!-- TODO: ADD GITHUB AND DEPLOYMENT BTNS -->
 	</div>
 	<div class="links-wrapper">
-		<a href={githubLink}>
+		<a target="_blank" rel="noreferrer noopener" class="link-icon" href={githubLink}>
 			<Fa icon={faGithub} />
 		</a>
 		{#if deploymentLink}
-			<a href={deploymentLink}>
+			<a target="_blank" rel="noreferrer noopener" class="link-icon" href={deploymentLink}>
 				<Fa icon={faLink} />
 			</a>
 		{/if}

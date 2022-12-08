@@ -12,24 +12,35 @@
 	}
 
 	&.projects {
+		.projects-foreword {
+			margin: 0 0 70px 0;
+		}
 		.gallery {
 			display: grid;
-			grid-template-columns: repeat(2, 300px);
-			grid-template-rows: repeat(2, 400px);
+			grid-template-columns: 600px;
+			grid-template-rows: repeat(4, 320px);
 
 			.project-container {
-				justify-self: center;
+				justify-self: left;
+				align-self: flex-start;
 				width: 230px;
 				height: 200px;
+				display: grid;
+				grid-template-columns: 300px 300px;
+				grid-template-rows: 50px 350px;
 
 				.project-title {
 					margin: 0 0 10px 0;
 					font-size: 18px;
+					grid-column: 2/3;
+					grid-row: 1/2;
 				}
 
 				.project-description {
 					margin: 0;
 					font-size: 14px;
+					grid-column: 2/3;
+					grid-row: 2/3;
 				}
 			}
 		}

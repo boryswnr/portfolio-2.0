@@ -7,7 +7,6 @@
 	import ContactForm from '../components/ContactForm.svelte';
 	import Fa from 'svelte-fa/src/fa.svelte';
 	import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons/index.js';
-	import { faG } from '@fortawesome/free-solid-svg-icons';
 	let mouseX: number;
 	let mouseY: number;
 	let focusedProject;
@@ -31,33 +30,6 @@
 			});
 		}
 	}
-
-	// function focusOnProject(e: MouseEvent) {
-	//     console.log(e);
-	//     let target = e.target as HTMLElement;
-	//     if (target.classList.contains("project-screen")) {
-	//         target = target.parentElement?.parentElement?.parentElement as HTMLElement
-	//         console.log("target:", target)
-	//     }
-	//     const projectWrapper = document.querySelector(".details");
-	//     const projectsArray = document.querySelectorAll(".project-container");
-	//     console.log(projectsArray);
-	//     projectsArray.forEach(project => project.classList.toggle('show'));
-	//     target.classList.add("show", "active");
-	//     projectWrapper?.classList.add("show-details")
-	//     let card1 =  document.getElementById("card-1") as HTMLElement;
-	//     let card2 =  document.getElementById("card-2") as HTMLElement;
-	//     let card3 =  document.getElementById("card-3") as HTMLElement;
-	//     let card4 =  document.getElementById("card-4") as HTMLElement;
-	//     card1.style.transform = "translate(-45%, -45%) rotate(-8deg)";
-	//     card2.style.transform = "translate(-45%, 45%) rotate(-5deg)";
-	//     card3.style.transform = "translate(45%, -45%) rotate(6deg)";
-	//     card4.style.transform = "translate(45%, 45%) rotate(-6deg)";
-	// }
-
-	// function printClickTarget(e: MouseEvent) {
-	//     console.log(e.target)
-	// }
 </script>
 
 <svelte:window on:mousemove={handleMouseMove} />
@@ -73,7 +45,7 @@
 		I like working out, music, hiking, playing with my dog. <br /> <br />
 		Interested in hiring me?
 	</p>
-	<a href="BorysWerner-CV.pdf" download class="cv-download-btn">Download CV</a>
+	<a href="BorysWerner-CV.pdf" download class="cv-download btn">Download CV</a>
 </section>
 
 <section class="hide section technologies">
@@ -151,20 +123,25 @@
 	</div>
 </section>
 
-<section class="hide contact-form">
+<section class="section hide contact-form">
 	<h3 class="contact-title">Contact</h3>
 
-	<div>
+	<div class="links-wrapper">
 		<p>Find me here:</p>
-		<a href="linkedin.com" class="icon-link linkedin"><Fa icon={faLinkedin} /></a>
-		<a href="github.com" class="icon-link github"><Fa icon={faGithub} /></a>
+		<a href="https://www.linkedin.com/in/borys-wnr/" class="icon-link linkedin"
+			><Fa icon={faLinkedin} /></a
+		>
+		<a href="https://github.com/boryswnr" class="icon-link github"><Fa icon={faGithub} /></a>
 	</div>
 
 	<p>Wanna use my fancy form?</p>
 
 	<ContactForm />
 
-	<p>Prefer simple e-mail? Mail me <a href="mailto: boryswnr@protonmail.com">here.</a></p>
+	<p>
+		Prefer simple e-mail? Mail me <a class="mail-to" href="mailto: boryswnr@protonmail.com">here.</a
+		>
+	</p>
 </section>
 
 <style lang="scss">

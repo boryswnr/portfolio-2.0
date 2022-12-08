@@ -10,7 +10,12 @@
 
 	<input placeholder="E-mail" type="email" required bind:value={email} />
 
-	<textarea class="message" placeholder="What would you like to tell me?" bind:value={message} />
+	<textarea
+		class="message"
+		required
+		placeholder="What would you like to tell me?"
+		bind:value={message}
+	/>
 
 	<button type="submit" class="submit">Submit</button>
 </form>

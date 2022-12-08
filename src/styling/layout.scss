@@ -14,10 +14,26 @@
 
 		:global(a) {
 			text-decoration: none;
-			color: $main-font-color;
+			color: $alt-font-color;
 
 			&:hover {
 				color: $link-hover-color;
+			}
+		}
+
+		:global(.btn) {
+			background-color: $btn-bg-color;
+			border: 1px solid $borders-color;
+			padding: 10px 15px;
+			border-radius: 20px;
+			box-shadow: -8px 11px 20px -1px rgba(0, 0, 0, 0.46);
+			-webkit-box-shadow: -8px 11px 20px -1px rgba(0, 0, 0, 0.46);
+			-moz-box-shadow: -8px 11px 20px -1px rgba(0, 0, 0, 0.46);
+
+			&:active {
+				box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75) inset;
+				-webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75) inset;
+				-moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75) inset;
 			}
 		}
 

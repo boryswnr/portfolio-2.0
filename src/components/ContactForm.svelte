@@ -17,7 +17,7 @@
 		bind:value={message}
 	/>
 
-	<button type="submit" class="submit">Submit</button>
+	<button type="submit" class="submit btn">Send message</button>
 </form>
 
 <style lang="scss">

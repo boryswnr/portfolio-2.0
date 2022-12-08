@@ -128,10 +128,18 @@
 
 	<div class="links-wrapper">
 		<p>Find me here:</p>
-		<a href="https://www.linkedin.com/in/borys-wnr/" class="icon-link linkedin"
-			><Fa icon={faLinkedin} /></a
+		<a
+			target="_blank"
+			rel="noreferrer noopener"
+			href="https://www.linkedin.com/in/borys-wnr/"
+			class="icon-link linkedin"><Fa icon={faLinkedin} /></a
 		>
-		<a href="https://github.com/boryswnr" class="icon-link github"><Fa icon={faGithub} /></a>
+		<a
+			target="_blank"
+			rel="noreferrer noopener"
+			href="https://github.com/boryswnr"
+			class="icon-link github"><Fa icon={faGithub} /></a
+		>
 	</div>
 
 	<p>Wanna use my fancy form?</p>

@@ -1,4 +1,5 @@
 @import './variables';
+@import './mixins';
 
 .section {
 	margin: 0 0 100px 0;
@@ -17,30 +18,60 @@
 		}
 		.gallery {
 			display: grid;
-			grid-template-columns: 600px;
-			grid-template-rows: repeat(4, 320px);
+			grid-template-columns: 230px;
+			grid-template-rows: repeat(4, 450px);
 
 			.project-container {
-				justify-self: left;
+				justify-self: center;
 				align-self: flex-start;
 				width: 230px;
 				height: 200px;
 				display: grid;
-				grid-template-columns: 300px 300px;
-				grid-template-rows: 50px 350px;
+				grid-template-columns: 300px;
+				grid-template-rows: 250px 50px 150px;
 
 				.project-title {
 					margin: 0 0 10px 0;
 					font-size: 18px;
-					grid-column: 2/3;
-					grid-row: 1/2;
+					grid-row: 2/3;
+					justify-self: center;
 				}
 
 				.project-description {
 					margin: 0;
 					font-size: 14px;
-					grid-column: 2/3;
-					grid-row: 2/3;
+					grid-row: 3/4;
+				}
+			}
+
+			@include forMobile {
+				grid-template-columns: 400px;
+				grid-template-rows: repeat(4, 320px);
+
+				.project-container {
+					justify-self: left;
+					align-self: flex-start;
+					grid-template-columns: 250px 170px;
+					grid-template-rows: 50px 350px;
+
+					.project-title {
+						grid-column: 2/3;
+						grid-row: 1/2;
+						justify-self: left;
+					}
+
+					.project-description {
+						grid-column: 2/3;
+						grid-row: 2/3;
+					}
+				}
+
+				@include forTablet {
+					.project-container {
+						justify-self: stretch;
+						align-self: center;
+						grid-template-columns: 260px 300px;
+					}
 				}
 			}
 		}
@@ -56,16 +87,6 @@
 
 		.mail-to {
 			text-decoration: underline;
-		}
-	}
-}
-
-@media (max-width: 900px) {
-	.section {
-		&.projects {
-			.gallery {
-				grid-template-columns: 300px;
-			}
 		}
 	}
 }

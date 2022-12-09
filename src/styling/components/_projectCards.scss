@@ -1,7 +1,7 @@
 @import '../variables';
 
 .project-wrapper {
-	z-index: 20;
+	justify-self: center;
 
 	.project-card {
 		position: relative;
@@ -53,16 +53,9 @@
 
 	.links-wrapper {
 		display: flex;
-		justify-content: center;
-		margin: 0 0 0 -70px;
+		justify-content: space-around;
 		font-size: 20px;
 		font-size: 30px;
-
-		.link-icon {
-			&:first-child {
-				margin: 0 20px 0 0;
-			}
-		}
 	}
 
 	:hover > #card-1 {

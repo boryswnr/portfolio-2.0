@@ -19,7 +19,7 @@
 		<img class="logo" src="tech-stack-svgs/React.svg" alt="React logo" />
 	</div>
 	<div class="logo-wrapper hide" style="--order: 4">
-		<img class="logo" src="tech-stack-svgs/Python.svg" alt="python logo" />
+		<img class="logo" src="tech-stack-svgs/Python.svg" alt="Python logo" />
 	</div>
 	<div class="logo-wrapper hide" style="--order: 5">
 		<img class="logo" src="tech-stack-svgs/Svelte.svg" alt="Svelte logo" />

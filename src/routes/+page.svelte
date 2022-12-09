@@ -49,7 +49,7 @@
 
 <WelcomeSign />
 
-<section class="hide section about-me">
+<section class="hide section about-me" id="about-me">
 	<h2 class="section-title">About me</h2>
 	<p class="about-me-paragraph">
 		I am a mostly self-taught developer in making. I would like to become fullstack eventually, but
@@ -65,7 +65,7 @@
 	<TechStack />
 </section>
 
-<section class="hide section projects">
+<section class="hide section projects" id="projects">
 	<h3>My projects</h3>
 	<p class="projects-foreword">
 		Here are some of the projects I have made. I code in Python in my current job, but I can't show
@@ -136,7 +136,7 @@
 	</div>
 </section>
 
-<section class="section hide contact-form">
+<section class="section hide contact-form" id="contact">
 	<h3 class="contact-title">Contact</h3>
 
 	<div class="links-wrapper">

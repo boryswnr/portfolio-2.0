@@ -33,12 +33,8 @@
 	}
 
 	function changeEyeColor() {
-		// const rightEye = document.querySelector('.eye-div.right') as Element;
-		// const leftEye = document.querySelector('.eye-div.left') as Element;
 		const eyeballs = document.querySelectorAll('.eyeball') as NodeListOf<HTMLElement>;
 		colorsNumber + 1 >= colorsArray.length ? (colorsNumber = 0) : (colorsNumber += 1);
-		// console.log('colorsNumber:', colorsNumber);
-		// console.log(rightEyePseudo, leftEyePseudo);
 		eyeballs.forEach((eye) => {
 			eye.style.backgroundColor = colorsArray[colorsNumber];
 		});
@@ -50,7 +46,7 @@
 <WelcomeSign />
 
 <section class="hide section about-me" id="about-me">
-	<h2 class="section-title">About me</h2>
+	<h2 class="title about-me">About me</h2>
 	<p class="about-me-paragraph">
 		I am a mostly self-taught developer in making. I would like to become fullstack eventually, but
 		I'm not sure yet what path will take me there. <br /> <br />
@@ -66,7 +62,7 @@
 </section>
 
 <section class="hide section projects" id="projects">
-	<h3>My projects</h3>
+	<h3 class="title my-projects">My projects</h3>
 	<p class="projects-foreword">
 		Here are some of the projects I have made. I code in Python in my current job, but I can't show
 		you those, since my work is subject to non-disclosure agreement.
@@ -137,7 +133,7 @@
 </section>
 
 <section class="section hide contact-form" id="contact">
-	<h3 class="contact-title">Contact</h3>
+	<h3 class="contact title">Contact</h3>
 
 	<div class="links-wrapper">
 		<p>Find me here:</p>

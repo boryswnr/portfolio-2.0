@@ -7,7 +7,7 @@
 	});
 </script>
 
-<h3>Technologies I work with</h3>
+<h3 class="title tech-stack">Technologies I work with</h3>
 <div class="technologies-frame">
 	<div class="logo-wrapper hide" style="--order: 1">
 		<img class="logo" src="tech-stack-svgs/JavaScript.svg" alt="JS logo" />

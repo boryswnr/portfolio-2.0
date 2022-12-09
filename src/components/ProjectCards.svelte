@@ -22,7 +22,6 @@
 		{#if photo4}
 			<img class="project-screen" src={photo4} alt="a screen of the project" id="card-2" />
 		{/if}
-		<!-- TODO: ADD GITHUB AND DEPLOYMENT BTNS -->
 	</div>
 	<div class="links-wrapper">
 		<a target="_blank" rel="noreferrer noopener" class="link-icon" href={githubLink}>

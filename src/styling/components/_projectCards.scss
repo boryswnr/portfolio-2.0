@@ -1,7 +1,8 @@
 @import '../variables';
+@import '../mixins';
 
 .project-wrapper {
-	justify-self: center;
+	justify-self: left;
 
 	.project-card {
 		position: relative;
@@ -20,6 +21,14 @@
 			-moz-user-drag: none;
 			-khtml-user-drag: none;
 			-webkit-user-drag: none;
+
+			@include forTablet {
+				max-width: 230px;
+			}
+
+			@include forComputer {
+				max-width: 300px;
+			}
 		}
 
 		#card-1 {
@@ -56,6 +65,14 @@
 		justify-content: space-around;
 		font-size: 20px;
 		font-size: 30px;
+
+		@include forTablet {
+			margin: 20px 0 0 40px;
+		}
+
+		@include forComputer {
+			margin: 60px 0 0 80px;
+		}
 	}
 
 	:hover > #card-1 {

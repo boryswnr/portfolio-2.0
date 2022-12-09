@@ -58,11 +58,13 @@
 						grid-column: 2/3;
 						grid-row: 1/2;
 						justify-self: left;
+						margin: 30px 0 0 0;
 					}
 
 					.project-description {
 						grid-column: 2/3;
 						grid-row: 2/3;
+						margin: 30px 0 0 0;
 					}
 				}
 
@@ -70,14 +72,16 @@
 					.project-container {
 						justify-self: stretch;
 						align-self: center;
-						grid-template-columns: 260px 300px;
+						grid-template-columns: 350px 280px;
 					}
 				}
 
 				@include forComputer {
+					grid-template-rows: repeat(4, 450px);
 					.project-container {
 						justify-self: center;
-						grid-template-columns: 330px 360px;
+						grid-template-columns: 360px 360px;
+						column-gap: 20px;
 					}
 				}
 			}

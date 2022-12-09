@@ -2,7 +2,7 @@
 @import './mixins';
 
 .section {
-	margin: 0 0 100px 0;
+	margin: 0 0 130px 0;
 
 	.about-me-paragraph {
 		margin: 0 0 50px 0;
@@ -71,6 +71,13 @@
 						justify-self: stretch;
 						align-self: center;
 						grid-template-columns: 260px 300px;
+					}
+				}
+
+				@include forComputer {
+					.project-container {
+						justify-self: center;
+						grid-template-columns: 330px 360px;
 					}
 				}
 			}

@@ -68,4 +68,8 @@
 	@include forTablet {
 		max-width: 600px;
 	}
+
+	@include forComputer {
+		max-width: 900px;
+	}
 }

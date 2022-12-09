@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import { intersectionObserver, angle } from '../utils';
 	import { onMount } from 'svelte';
 	import WelcomeSign from '../components/WelcomeSign.svelte';
@@ -151,11 +151,11 @@
 		>
 	</div>
 
-	<p>Wanna use my fancy form?</p>
+	<p class="form-inv">Wanna use my fancy form?</p>
 
 	<ContactForm />
 
-	<p>
+	<p class="email-note">
 		Prefer simple e-mail? Mail me <a class="mail-to" href="mailto: boryswnr@protonmail.com">here.</a
 		>
 	</p>

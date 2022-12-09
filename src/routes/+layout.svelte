@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import Hamburger from '../components/Hamburger.svelte';
 	let open = false;
 	let menuHidden = true;

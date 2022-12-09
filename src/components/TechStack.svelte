@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { intersectionObserver } from '../utils';
 	import { onMount } from 'svelte';
 

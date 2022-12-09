@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Fa from 'svelte-fa/src/fa.svelte';
 	import { faGithub } from '@fortawesome/free-brands-svg-icons/index.js';
 	import { faLink } from '@fortawesome/free-solid-svg-icons/index.js';

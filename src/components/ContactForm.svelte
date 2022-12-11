@@ -5,7 +5,7 @@
 	function handleSubmit() {}
 </script>
 
-<form on:submit|preventDefault={handleSubmit}>
+<form name="contact" netlify on:submit|preventDefault={handleSubmit}>
 	<input placeholder="Name" type="text" required bind:value={name} />
 
 	<input placeholder="E-mail" type="email" required bind:value={email} />

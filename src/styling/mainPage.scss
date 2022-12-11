@@ -78,6 +78,7 @@
 
 				@include forComputer {
 					grid-template-rows: repeat(4, 450px);
+
 					.project-container {
 						justify-self: center;
 						grid-template-columns: 360px 360px;

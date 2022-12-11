@@ -4,7 +4,7 @@
 	let message = '';
 </script>
 
-<form name="contact" method="post" data-netlify="true" on:submit|preventDefault>
+<form name="contact" method="post" data-netlify="true">
 	<input type="hidden" name="form-name" value="contact" />
 
 	<input name="name" placeholder="Name" type="text" required bind:value={name} />

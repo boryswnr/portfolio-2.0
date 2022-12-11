@@ -2,12 +2,11 @@
 	let name = '';
 	let email = '';
 	let message = '';
-	function handleSubmit() {
-		console.log('submitted');
-	}
 </script>
 
-<form name="contact" data-netlify="true" on:submit|preventDefault={handleSubmit}>
+<form name="contact" method="post" data-netlify="true" on:submit|preventDefault>
+	<input type="hidden" name="form-name" value="contact" />
+
 	<input name="name" placeholder="Name" type="text" required bind:value={name} />
 
 	<input name="e-mail" placeholder="E-mail" type="email" required bind:value={email} />

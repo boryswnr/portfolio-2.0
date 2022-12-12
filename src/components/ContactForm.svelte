@@ -33,6 +33,7 @@
 	/>
 
 	<button type="submit" class="submit btn">Send message</button>
+	<input type="hidden" name="form-name" value="contact" />
 </form>
 
 <style lang="scss">

@@ -5,7 +5,7 @@
 	let formSent = false;
 
 	async function handleSubmit(event: SubmitEvent) {
-		const response = await fetch('/.netlify/functions/mail-background', {
+		const response = await fetch('/.netlify/functions/mail', {
 			method: 'POST',
 			body: JSON.stringify([name, email, message])
 		});

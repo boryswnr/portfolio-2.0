@@ -5,13 +5,13 @@
 	let formSent = false;
 
 	async function handleSubmit() {
-		const response = await fetch('/.netlify/functions/mail', {
-			method: 'POST',
-			body: JSON.stringify({ name, email, message })
-		});
-		console.log('repsonse:', response);
-		console.log('formsent:', formSent);
-		response.ok ? (formSent = true) : (formSent = false);
+		// const response = await fetch('/.netlify/functions/mail', {
+		// 	method: 'POST',
+		// 	body: JSON.stringify({ name, email, message })
+		// });
+		// console.log('repsonse:', response);
+		// console.log('formsent:', formSent);
+		// response.ok ? (formSent = true) : (formSent = false);
 	}
 </script>
 
@@ -19,7 +19,7 @@
 	<p>Message sent via form!</p>
 {/if}
 
-<form name="contact" on:submit|preventDefault={handleSubmit}>
+<form name="contact" data-netlify="true">
 	<input name="name" placeholder="Name" type="text" required bind:value={name} />
 
 	<input name="e-mail" placeholder="E-mail" type="email" required bind:value={email} />

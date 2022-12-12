@@ -47,9 +47,9 @@ export function validateEmail(inputText: string) {
 	return true;
 }
 
+import sgMail from '@sendgrid/mail';
 export function sendEmail(name: string, email: string, text: string) {
-	const sgMail = require('@sendgrid/mail');
-	sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+	sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
 	const msg = {
 		to: 'boryswnr@protonmail.com', // Change to your recipient
 		from: 'boryswnr@protonmail.com', // Change to your verified sender

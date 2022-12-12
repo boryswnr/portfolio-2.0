@@ -1,5 +1,8 @@
-async function handleSubmit(name, email, message) {
-	const form = document.querySelector(form);
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+exports.handler = async function (event) {
+	const { name, email, message } = JSON.parse(event.body);
 
 	const response = await fetch('https://api.sendgrid.com/v3/', {
 		method: 'POST',
@@ -23,5 +26,6 @@ async function handleSubmit(name, email, message) {
 			]
 		})
 	});
+
 	return response;
-}
+};

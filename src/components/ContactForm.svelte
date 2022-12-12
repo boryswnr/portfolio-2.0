@@ -5,13 +5,13 @@
 	let formSent = false;
 
 	async function handleSubmit(event: SubmitEvent) {
-		const response = await fetch('./netlify/functions/sendGrid', {
+		const response = await fetch('/.netlify/functions/mail-background', {
 			method: 'POST',
 			body: JSON.stringify([name, email, message])
 		});
-		formSent = true;
 		console.log('repsonse:', response);
 		console.log('formsent:', formSent);
+		response.ok ? (formSent = true) : (formSent = false);
 	}
 </script>
 

@@ -4,11 +4,10 @@
 	let message = '';
 	let formSent = false;
 
-	async function handleSubmit(event: SubmitEvent) {
-		const formData = new FormData(event.target as HTMLFormElement);
+	async function handleSubmit() {
 		const response = await fetch('/.netlify/functions/mail', {
 			method: 'POST',
-			body: JSON.stringify(formData)
+			body: JSON.stringify({ name, email, message })
 		});
 		console.log('repsonse:', response);
 		console.log('formsent:', formSent);

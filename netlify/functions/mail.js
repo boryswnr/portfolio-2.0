@@ -3,7 +3,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 exports.handler = async function (event) {
 	const { name, email, message } = JSON.parse(event.body);
-
+	console.log(event);
 	const response = await fetch('https://api.sendgrid.com/v3/', {
 		method: 'POST',
 		headers: {

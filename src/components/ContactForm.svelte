@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { dataset_dev } from 'svelte/internal';
+	import { env } from '$env/dynamic/private';
 
 	let name = '';
 	let email = '';
@@ -12,7 +12,7 @@
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
-				Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`
+				Authorization: `Bearer ${env.SENDGRID_API_KEY}`
 			},
 			body: JSON.stringify({
 				personalizations: [

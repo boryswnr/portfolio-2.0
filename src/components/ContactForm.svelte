@@ -1,12 +1,46 @@
 <script lang="ts">
+	import { dataset_dev } from 'svelte/internal';
+
 	let name = '';
 	let email = '';
 	let message = '';
+	let formSent = false;
+
+	async function handleSubmit(event: SubmitEvent) {
+		event.preventDefault();
+		const response = await fetch('https://api.sendgrid.com/v3/', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`
+			},
+			body: JSON.stringify({
+				personalizations: [
+					{
+						to: [{ email: 'boryswnr@protonmail.com' }],
+						subject: [{ subject: 'New contact form message' }]
+					}
+				],
+				from: { email: 'boryswnr@protonmail.com' },
+				content: [
+					{
+						type: 'text/plain',
+						value: `Sender: ${name}, ${email}. Message: ${message}`
+					}
+				]
+			})
+		});
+		formSent = true;
+		console.log('repsonse:', response);
+		console.log('formsent:', formSent);
+	}
 </script>
 
-<form name="contact" method="post" data-netlify="true">
-	<input type="hidden" name="form-name" value="contact" />
+{#if formSent}
+	<p>Message sent via form!</p>
+{/if}
 
+<form name="contact" on:submit|preventDefault={handleSubmit}>
 	<input name="name" placeholder="Name" type="text" required bind:value={name} />
 
 	<input name="e-mail" placeholder="E-mail" type="email" required bind:value={email} />

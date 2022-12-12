@@ -38,3 +38,31 @@ export function clickOutside(node: Node) {
 		}
 	};
 }
+
+export function validateEmail(inputText: string) {
+	const mailformat = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+	if (inputText.match(mailformat)) {
+		return false;
+	}
+	return true;
+}
+
+export function sendEmail(name: string, email: string, text: string) {
+	const sgMail = require('@sendgrid/mail');
+	sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+	const msg = {
+		to: 'boryswnr@protonmail.com', // Change to your recipient
+		from: 'boryswnr@protonmail.com', // Change to your verified sender
+		subject: 'Contact form has been used',
+		text: `A message was sent via your HTML from: ${name}, ${email}. Message: ${text}`,
+		html: `A message was sent via your HTML from: <strong>${name}</strong>, <strong>${email}</strong>. Message: ${text}`
+	};
+	sgMail
+		.send(msg)
+		.then(() => {
+			console.log('Email sent');
+		})
+		.catch((error: Error) => {
+			console.error(error);
+		});
+}

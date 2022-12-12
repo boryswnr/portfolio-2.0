@@ -1,34 +1,13 @@
 <script lang="ts">
-	import { env } from '$env/dynamic/private';
-
 	let name = '';
 	let email = '';
 	let message = '';
 	let formSent = false;
 
 	async function handleSubmit(event: SubmitEvent) {
-		event.preventDefault();
-		const response = await fetch('https://api.sendgrid.com/v3/', {
+		const response = await fetch('./netlify/functions/sendGrid', {
 			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-				Authorization: `Bearer ${env.SENDGRID_API_KEY}`
-			},
-			body: JSON.stringify({
-				personalizations: [
-					{
-						to: [{ email: 'boryswnr@protonmail.com' }],
-						subject: [{ subject: 'New contact form message' }]
-					}
-				],
-				from: { email: 'boryswnr@protonmail.com' },
-				content: [
-					{
-						type: 'text/plain',
-						value: `Sender: ${name}, ${email}. Message: ${message}`
-					}
-				]
-			})
+			body: JSON.stringify([name, email, message])
 		});
 		formSent = true;
 		console.log('repsonse:', response);

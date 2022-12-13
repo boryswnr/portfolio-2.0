@@ -1,3 +1,3 @@
 exports.handler = async (event, context) => {
-	return event.body;
+	return JSON.stringify(event.body);
 };

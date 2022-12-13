@@ -19,7 +19,7 @@
 	<p>Message sent via form!</p>
 {/if}
 
-<form name="contact">
+<form name="contact" on:submit|preventDefault={handleSubmit}>
 	<input name="name" placeholder="Name" type="text" required bind:value={name} />
 
 	<input name="e-mail" placeholder="E-mail" type="email" required bind:value={email} />

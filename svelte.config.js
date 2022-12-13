@@ -11,7 +11,6 @@ const config = {
 		adapter: adapter(),
 		prerender: {
 			crawl: true,
-			enabled: true,
 			entries: ['*'],
 			handleHttpError: 'warn'
 		}

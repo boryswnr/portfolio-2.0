@@ -36,7 +36,7 @@
 		"@fortawesome/free-brands-svg-icons": "^6.2.1",
 		"@sendgrid/mail": "^7.7.0",
 		"axios": "^1.2.1",
-		"node-fetch": "^3.3.0",
+		"node-fetch": "^2.x",
 		"svelte-fa": "^3.0.3",
 		"svelte-fontawesome": "^0.0.3",
 		"svelte-icons": "^2.1.0"

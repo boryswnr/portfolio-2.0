@@ -13,7 +13,8 @@ const config = {
 			crawl: true,
 			enabled: true,
 			force: true,
-			pages: ['*']
+			pages: ['*'],
+			handleHttpError: 'warn'
 		}
 	}
 };

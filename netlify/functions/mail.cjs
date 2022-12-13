@@ -26,6 +26,8 @@ exports.handler = async function (event) {
 	// 	})
 	// });
 
+	console.log('event:', event);
+
 	const msg = {
 		to: 'boryswnr@protonmail.com',
 		from: 'boryswnr@protonmail.com',

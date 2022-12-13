@@ -5,13 +5,14 @@
 	let formSent = false;
 
 	async function handleSubmit() {
+		console.log(JSON.stringify({ name, email, message }));
 		const response = await fetch('/.netlify/functions/test', {
 			method: 'POST',
 			body: JSON.stringify({ name, email, message })
 		});
 		console.log('repsonse:', response);
-		console.log('formsent:', formSent);
 		response.ok ? (formSent = true) : (formSent = false);
+		console.log('formsent:', formSent);
 	}
 </script>
 

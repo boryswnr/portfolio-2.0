@@ -1,5 +1,5 @@
-import fetch from 'node-fetch';
-import sgMail from '@sendgrid/mail';
+const fetch = require('node-fetch');
+const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 exports.handler = async function (event) {

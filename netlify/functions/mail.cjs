@@ -1,10 +1,9 @@
-const fetch = require('node-fetch');
+const axios = require('axios');
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 exports.handler = async function (event) {
-	const response = await fetch('https://api.sendgrid.com/v3/', {
-		method: 'POST',
+	const response = await axios.post('https://api.sendgrid.com/v3/', {
 		headers: {
 			'Content-Type': 'application/json',
 			Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`

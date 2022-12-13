@@ -26,13 +26,14 @@ exports.handler = async function (event) {
 	// 	})
 	// });
 
-	console.log('event:', event);
+	console.log('event.body:', event.body);
+	console.log('event.body:', JSON.parse(event.body));
 
 	const msg = {
 		to: 'boryswnr@protonmail.com',
 		from: 'boryswnr@protonmail.com',
 		subject: 'Contact form has been used',
-		text: `A message was sent via your HTML from: ${event.body.name}, ${event.body.email}. Message: ${event.body.message}`,
+		text: `A message was sent via your HTML from: ${event.body['name']}, ${event.body['email']}. Message: ${event.body.message}`,
 		html: `A message was sent via your HTML from: <strong>${event.body.name}</strong>, <strong>${event.body.email}</strong>. Message: ${event.body.message}`
 	};
 

@@ -1,9 +1,8 @@
-import fetch from 'node-fetch';
-import sgMail from '@sendgrid/mail';
-
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
 exports.handler = async function (event) {
+	const fetch = require('node-fetch');
+	const sgMail = require('@sendgrid/mail');
+	sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
 	const response = await fetch('https://api.sendgrid.com/v3/', {
 		method: 'POST',
 		headers: {

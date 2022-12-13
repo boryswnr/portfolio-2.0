@@ -2,6 +2,13 @@
   command = "npm run build"
   publish = "build"
 
+  [dev]
+  cmmand = "vite dev"
+
+  [functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
 [[_redirects]]
   from = "/*"
   to = "/app.html"

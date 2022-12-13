@@ -6,7 +6,7 @@
 
 	async function handleSubmit() {
 		console.log(JSON.stringify({ name, email, message }));
-		const response = await fetch('/.netlify/functions/test', {
+		const response = await fetch('/.netlify/functions/mail', {
 			method: 'POST',
 			body: JSON.stringify({ name, email, message })
 		});

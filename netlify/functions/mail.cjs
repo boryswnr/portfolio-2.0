@@ -25,6 +25,7 @@ exports.handler = async function (event) {
 			]
 		})
 	});
-
+	console.log('apiKey:', process.env.SENDGRID_API_KEY);
+	console.log('response:', response);
 	return response;
 };

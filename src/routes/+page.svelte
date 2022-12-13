@@ -1,3 +1,7 @@
+<script context="module">
+	export const prerender = true;
+</script>
+
 <script lang="ts">
 	import { intersectionObserver, angle } from '../utils';
 	import { onMount } from 'svelte';

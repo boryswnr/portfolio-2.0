@@ -34,14 +34,18 @@ exports.handler = async function (event) {
 		html: `A message was sent via your HTML from: <strong>${event.body.name}</strong>, <strong>${event.body.email}</strong>. Message: ${event.body.message}`
 	};
 
+	console.log('msg:', msg);
+
 	sgMail
 		.send(msg)
 		.then((response) => {
 			console.log(response[0].statusCode);
 			console.log(response[0].headers);
-			return response;
+			console.log(response);
 		})
 		.catch((error) => {
 			console.error(error);
 		});
+
+	console.log('end function');
 };

@@ -19,7 +19,8 @@
 	<p>Message sent via form!</p>
 {/if}
 
-<form name="contact" data-netlify="true">
+<form name="contact" data-netlify="true" method="post">
+	<input type="hidden" name="form-name" value="contact" />
 	<input name="name" placeholder="Name" type="text" required bind:value={name} />
 
 	<input name="e-mail" placeholder="E-mail" type="email" required bind:value={email} />
@@ -33,7 +34,6 @@
 	/>
 
 	<button type="submit" class="submit btn">Send message</button>
-	<input type="hidden" name="form-name" value="contact" />
 </form>
 
 <style lang="scss">

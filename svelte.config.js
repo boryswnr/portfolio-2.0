@@ -8,12 +8,7 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter(),
-		prerender: {
-			crawl: true,
-			entries: ['*'],
-			handleHttpError: 'warn'
-		}
+		adapter: adapter()
 	}
 };
 

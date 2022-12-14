@@ -88,7 +88,7 @@
 		<div class="hide project-container" style="--order: 2">
 			<ProjectCards
 				githubLink="https://github.com/boryswnr/shopping-cart"
-				deploymentLink="https://borys-shopping-cart.netlify.app/"
+				deploymentLink="https://borys-shopping-cart.netlify.app/store"
 				photo1="project-screens/shopping-cart-1.png"
 				photo2="project-screens/shopping-cart-2.png"
 				photo3="project-screens/shopping-cart-3.png"

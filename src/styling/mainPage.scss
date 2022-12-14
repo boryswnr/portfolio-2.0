@@ -18,53 +18,62 @@
 		}
 		.gallery {
 			display: grid;
-			grid-template-columns: 230px;
-			grid-template-rows: repeat(4, 450px);
+			grid-template-columns: 290px;
+			grid-template-rows: repeat(4, 470px);
 
 			.project-container {
 				justify-self: center;
 				align-self: flex-start;
-				width: 230px;
+				max-width: 290px;
 				height: 200px;
 				display: grid;
-				grid-template-columns: 300px;
-				grid-template-rows: 250px 50px 150px;
+				grid-template-columns: 260px;
+				grid-template-rows: 250px 50px 160px;
 
 				.project-title {
 					margin: 0 0 10px 0;
-					font-size: 18px;
+					font-size: 20px;
 					grid-row: 2/3;
 					justify-self: center;
 				}
 
 				.project-description {
 					margin: 0;
-					font-size: 14px;
+					font-size: 17px;
 					grid-row: 3/4;
 				}
 			}
 
 			@include forMobile {
-				grid-template-columns: 400px;
+				grid-template-columns: 390px;
 				grid-template-rows: repeat(4, 320px);
 
 				.project-container {
 					justify-self: left;
 					align-self: flex-start;
-					grid-template-columns: 250px 170px;
+					grid-template-columns: 245px 145px;
 					grid-template-rows: 50px 350px;
 
 					.project-title {
 						grid-column: 2/3;
 						grid-row: 1/2;
 						justify-self: left;
-						margin: 30px 0 0 0;
+						margin: 0;
 					}
 
 					.project-description {
 						grid-column: 2/3;
 						grid-row: 2/3;
-						margin: 30px 0 0 0;
+						margin: 0;
+					}
+				}
+
+				@include forBiggerMobile {
+					grid-template-columns: 450px;
+					grid-template-rows: repeat(4, 320px);
+
+					.project-container {
+						grid-template-columns: 250px 200px;
 					}
 				}
 
@@ -77,11 +86,12 @@
 				}
 
 				@include forComputer {
+					grid-template-columns: 900px;
 					grid-template-rows: repeat(4, 450px);
 
 					.project-container {
-						justify-self: center;
-						grid-template-columns: 360px 360px;
+						justify-self: stretch;
+						grid-template-columns: 400px 500px;
 						column-gap: 20px;
 					}
 				}
@@ -92,7 +102,7 @@
 	&.contact-form {
 		.links-wrapper {
 			a {
-				font-size: 30px;
+				@include fluidTypeContainer(35px, 45px);
 				margin: 0 20px 0 0;
 			}
 		}

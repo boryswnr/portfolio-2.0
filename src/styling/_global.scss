@@ -11,6 +11,7 @@
 		color: $main-font-color;
 		margin: 0;
 		position: relative;
+		@include fluidTypeContainer(18px, 22px);
 
 		:global(a) {
 			text-decoration: none;

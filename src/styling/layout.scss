@@ -20,6 +20,7 @@
 	z-index: 5;
 
 	.nav-list {
+		max-width: 290px;
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
@@ -58,11 +59,20 @@
 }
 
 .main-wrapper {
-	max-width: 300px;
+	max-width: 290px;
 	margin: 0 auto;
 
+	.footer {
+		@include fluidTypeContainer(12px, 16px);
+		margin: 20px 0;
+	}
+
 	@include forMobile {
-		max-width: 350px;
+		max-width: 380px;
+	}
+
+	@include forBiggerMobile {
+		max-width: 470px ;
 	}
 
 	@include forTablet {

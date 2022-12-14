@@ -88,7 +88,7 @@
 		<div class="hide project-container" style="--order: 2">
 			<ProjectCards
 				githubLink="https://github.com/boryswnr/shopping-cart"
-				deploymentLink="https://borys-shopping-cart.netlify.app/"
+				deploymentLink="https://borys-shopping-cart.netlify.app/store"
 				photo1="project-screens/shopping-cart-1.png"
 				photo2="project-screens/shopping-cart-2.png"
 				photo3="project-screens/shopping-cart-3.png"
@@ -151,13 +151,8 @@
 		>
 	</div>
 
-	<p class="form-inv">Wanna use my fancy form?</p>
-
-	<ContactForm />
-
 	<p class="email-note">
-		Prefer simple e-mail? Mail me <a class="mail-to" href="mailto: boryswnr@protonmail.com">here.</a
-		>
+		Mail me <a class="mail-to" href="mailto: boryswnr@protonmail.com">here.</a>
 	</p>
 </section>
 

@@ -14,10 +14,10 @@
 		text-align: center;
 		.img-container {
 			position: relative;
-			max-width: 400px;
+			max-width: 300px;
 			margin: 0 auto;
 			.photo {
-				max-width: 400px;
+				max-width: 300px;
 				margin-bottom: -4px;
 				-moz-user-select: none;
 				-khtml-user-select: none;
@@ -31,38 +31,84 @@
 			.eye-div {
 				position: absolute;
 				border-radius: 50%;
-				width: 38px;
-				height: 38px;
+				width: 28px;
+				height: 28px;
 				background-color: #fff;
 
 				&.right {
-					top: 112px;
-					right: 170px;
-
-					.eyeball {
-						position: absolute;
-						width: 10px;
-						height: 10px;
-						border-radius: 50%;
-						background-color: #000;
-						left: 10px;
-						top: 2px;
-					}
+					top: 84px;
+					right: 127px;
 				}
 
 				&.left {
-					top: 117px;
-					right: 223px;
+					top: 87px;
+					right: 166px;
+				}
+
+				.eyeball {
+					transition: 200ms;
+					position: absolute;
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					background-color: #000;
+					left: 10px;
+					top: 2px;
+				}
+			}
+
+			@include forBiggerMobile {
+				max-width: 400px;
+
+				.photo {
+					max-width: 400px;
+				}
+
+				.eye-div {
+					width: 37px;
+					height: 37px;
+
+					&.left {
+						top: 118px;
+						right: 224px;
+					}
+
+					&.right {
+						top: 114px;
+						right: 171px;
+					}
 
 					.eyeball {
-						transition: 200ms;
-						position: absolute;
-						width: 10px;
-						height: 10px;
-						border-radius: 50%;
-						background-color: #000;
-						left: 10px;
-						top: 2px;
+						height: 13px;
+						width: 13px;
+					}
+				}
+			}
+
+			@include forTablet {
+				max-width: 500px;
+
+				.photo {
+					max-width: 500px;
+				}
+
+				.eye-div {
+					width: 46px;
+					height: 46px;
+
+					&.left {
+						top: 145px;
+						right: 278px;
+					}
+
+					&.right {
+						top: 139px;
+						right: 214px;
+					}
+
+					.eyeball {
+						height: 15px;
+						width: 15px;
 					}
 				}
 			}
@@ -70,6 +116,7 @@
 	}
 
 	.title {
+		@include fluidTypeContainer(24px, 35px);
 		color: $main-font-color;
 		background-color: #00000086;
 		padding: 10px 15px;

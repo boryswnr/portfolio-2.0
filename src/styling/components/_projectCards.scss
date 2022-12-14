@@ -4,6 +4,10 @@
 .project-wrapper {
 	justify-self: center;
 
+	@include forComputer {
+		justify-self: stretch;
+	}
+
 	.project-card {
 		position: relative;
 		transition: 200ms;
@@ -63,7 +67,6 @@
 	.links-wrapper {
 		display: flex;
 		justify-content: space-around;
-		font-size: 20px;
 		font-size: 30px;
 
 		@include forTablet {
@@ -71,7 +74,7 @@
 		}
 
 		@include forComputer {
-			margin: 60px 0 0 80px;
+			margin: 60px 70px 0 0;
 		}
 	}
 

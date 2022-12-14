@@ -62,8 +62,17 @@
 	max-width: 290px;
 	margin: 0 auto;
 
+	.footer {
+		@include fluidTypeContainer(12px, 16px);
+		margin: 20px 0;
+	}
+
 	@include forMobile {
 		max-width: 380px;
+	}
+
+	@include forBiggerMobile {
+		max-width: 470px ;
 	}
 
 	@include forTablet {

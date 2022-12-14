@@ -38,31 +38,77 @@
 				&.right {
 					top: 84px;
 					right: 127px;
-
-					.eyeball {
-						position: absolute;
-						width: 10px;
-						height: 10px;
-						border-radius: 50%;
-						background-color: #000;
-						left: 10px;
-						top: 2px;
-					}
 				}
 
 				&.left {
 					top: 87px;
 					right: 166px;
+				}
+
+				.eyeball {
+					transition: 200ms;
+					position: absolute;
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					background-color: #000;
+					left: 10px;
+					top: 2px;
+				}
+			}
+
+			@include forBiggerMobile {
+				max-width: 400px;
+
+				.photo {
+					max-width: 400px;
+				}
+
+				.eye-div {
+					width: 37px;
+					height: 37px;
+
+					&.left {
+						top: 118px;
+						right: 224px;
+					}
+
+					&.right {
+						top: 114px;
+						right: 171px;
+					}
 
 					.eyeball {
-						transition: 200ms;
-						position: absolute;
-						width: 10px;
-						height: 10px;
-						border-radius: 50%;
-						background-color: #000;
-						left: 10px;
-						top: 2px;
+						height: 13px;
+						width: 13px;
+					}
+				}
+			}
+
+			@include forTablet {
+				max-width: 500px;
+
+				.photo {
+					max-width: 500px;
+				}
+
+				.eye-div {
+					width: 46px;
+					height: 46px;
+
+					&.left {
+						top: 145px;
+						right: 278px;
+					}
+
+					&.right {
+						top: 139px;
+						right: 214px;
+					}
+
+					.eyeball {
+						height: 15px;
+						width: 15px;
 					}
 				}
 			}

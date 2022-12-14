@@ -12,14 +12,20 @@
 	);
 }
 
-@mixin forTablet {
-	@media (min-width: 800px) {
+@mixin forMobile {
+	@media (min-width: 400px) {
 		@content;
 	}
 }
 
-@mixin forMobile {
-	@media (min-width: 400px) {
+@mixin forBiggerMobile {
+	@media (min-width: 500px) {
+		@content;
+	}
+}
+
+@mixin forTablet {
+	@media (min-width: 800px) {
 		@content;
 	}
 }

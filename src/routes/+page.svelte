@@ -151,13 +151,8 @@
 		>
 	</div>
 
-	<p class="form-inv">Wanna use my fancy form?</p>
-
-	<ContactForm />
-
 	<p class="email-note">
-		Prefer simple e-mail? Mail me <a class="mail-to" href="mailto: boryswnr@protonmail.com">here.</a
-		>
+		Mail me <a class="mail-to" href="mailto: boryswnr@protonmail.com">here.</a>
 	</p>
 </section>
 

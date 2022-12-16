@@ -151,8 +151,6 @@
 		>
 	</div>
 
-	<ContactForm />
-
 	<p class="email-note">
 		Mail me <a class="mail-to" href="mailto: boryswnr@protonmail.com">here.</a>
 	</p>

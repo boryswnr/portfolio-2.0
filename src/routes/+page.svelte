@@ -121,6 +121,8 @@
 				deploymentLink="https://boryswnr.github.io/weatherApp/"
 				photo1="project-screens/weather-app-1.png"
 				photo2="project-screens/weather-app-2.png"
+				photo3="project-screens/weather-app-3.png"
+				photo4="project-screens/weather-app-4.png"
 			/>
 			<h6 class="project-title">Weather forecast app.</h6>
 			<p class="project-description">

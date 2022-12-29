@@ -41,6 +41,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>BW's website</title>
+</svelte:head>
+
 <svelte:window on:mousemove={handleMouseMove} on:click={changeEyeColor} />
 
 <WelcomeSign />

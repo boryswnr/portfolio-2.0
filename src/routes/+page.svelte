@@ -73,6 +73,21 @@
 	</p>
 
 	<div class="gallery">
+		<div class="hide project-container" style="--order: 2">
+			<ProjectCards
+				githubLink="https://github.com/boryswnr/very-social-media"
+				deploymentLink="https://collective-social-media-boryswnr.vercel.app/"
+				photo1="project-screens/collective-1.png"
+				photo2="project-screens/collective-2.png"
+				photo3="project-screens/collective-3.png"
+				photo4="project-screens/collective-4.png"
+			/>
+			<h6 class="project-title">Social media app</h6>
+			<p class="project-description">
+				A social media app made with React, NextJS, TypeScript. Connected to Firebase backend. Sign
+				in with Google, write posts, like them and comment under them.
+			</p>
+		</div>
 		<div class="hide project-container" style="--order: 1">
 			<ProjectCards
 				githubLink="https://github.com/boryswnr/party_app"
@@ -86,21 +101,6 @@
 				A fullstack project built around Spotify API to let people play/pause music and vote on
 				skipping a song. No deployment available. I am working on a version that will be deployed
 				live.
-			</p>
-		</div>
-
-		<div class="hide project-container" style="--order: 2">
-			<ProjectCards
-				githubLink="https://github.com/boryswnr/shopping-cart"
-				deploymentLink="https://borys-shopping-cart.netlify.app/store"
-				photo1="project-screens/shopping-cart-1.png"
-				photo2="project-screens/shopping-cart-2.png"
-				photo3="project-screens/shopping-cart-3.png"
-			/>
-			<h6 class="project-title">E-commerce frontend</h6>
-			<p class="project-description">
-				A frontend of an e-commerce shopping cart. Technologies used: TypeScript, React. A shopping
-				cart you can find on any on-line shop. Basic styling via bootstrap.
 			</p>
 		</div>
 
